@@ -9,9 +9,10 @@
 </head>
 
 <body>
+    <!-- this is the top line with my picture, Portfolio title, and nav bar -->
     <header class="header">
         <img src="assets/images/Headshot.jpg" alt="My Headshot"> 
-      <h1>       
+    <h1>       
         Chris Arechiga's Portfolio
     </h1>  
       <nav>
@@ -29,38 +30,60 @@
       </nav>
     </header>
 <main>
+
+    <!-- this is the first section "about me" that contains a little written bio -->
 <section class="about" id="About-Me">
     <h2>About Me</h2>
     <div>
     </p>
     Hi and welcome to my portfolio. My name is Chris Arechiga and I am a beginner developer and am currently enrolled in the full-stack web development Bootcamp at UCI. On this page you will find my completed projects.
-    I currently work full time in the dental implant field, while im learning to code. In addition, I play the drums in a band called the Skull Collective and have a degree in Music Technology from Tulane University and have been playing music for my entire life.
+    I currently work full time in the dental implant field, while im learning to code. In addition, I play the drums in a band called The Skull Collective, have a degree in Music Technology from Tulane University, and have been playing music for my entire life.
     <p>
     </div>
-
 </section>
+
+<!-- this is the second section "My Work" that displays images of my applications and links to them -->
 <section class="work" id="My-Work">
     <h2>
         My Work
     </h2>
-    <!-- this Div is for the first listed work that will be larger than the others -->
-    <div>
-        <a href="https://carechiga.github.io/week-one-challenge/">
+        <ul>
+<!-- first item in the list needs to be bigger than other items 'class=first-item' to adjust separately-->
+        <li class="first-item">    <a href="https://carechiga.github.io/week-one-challenge/">
             <img src="assets/images/Horiseon-screenshot.png"  alt="Highlighted work">
         </a>
-       <p>UCI Bootcamp - Week one challenge</p> 
-    </div>
-    <!-- This list is for all the other linked works on my portfolio -->
-    <ul>
-        <li><img src="assets/images//coming-soon.webp"></li>
-        <li><img src="assets/images//coming-soon.webp"></li>
-        <li><img src="assets/images//coming-soon.webp"></li>
-        <li><img src="assets/images//coming-soon.webp"></li>
-        <li><img src="assets/images//coming-soon.webp"></li>
-        <li><img src="assets/images//coming-soon.webp"></li>
-      
+       <p>UCI Bootcamp - Week One Challenge</p> </li>
+
+<!--  every other item in the list can be the same size and have same styling given 'class=not-first'-->
+<!--  Currently don't have works to fill up images, so they link to google.com-->
+<li class="not-first">
+            <a href="https://www.google.com"><img src="assets/images//coming-soon.webp"></a>
+            <p>Coming Soon</p>
+        </li>
+        <li class="not-first">
+            <a href="https://www.google.com"><img src="assets/images//coming-soon.webp"></a>
+            <p>Coming Soon</p>
+        </li>       
+        <li class="not-first">
+            <a href="https://www.google.com"><img src="assets/images//coming-soon.webp"></a>
+            <p>Coming Soon</p>
+        </li>    
+        <li class="not-first">
+            <a href="https://www.google.com"><img src="assets/images//coming-soon.webp"></a>
+            <p>Coming Soon</p>
+        </li>
+        <li class="not-first">
+            <a href="https://www.google.com"><img src="assets/images//coming-soon.webp"></a>
+            <p>Coming Soon</p>
+        </li>
+        <li class="not-first">
+            <a href="https://www.google.com"><img src="assets/images//coming-soon.webp"></a>
+            <p>Coming Soon</p>
+        </li>      
     </ul>
 </section>
+
+<!-- this is the last section "contact me" with my contact info and link to my GitHub profile -->
 <section class="contact" id="Contact-Info">
     <h2>Contact Me</h2>
     <ul>    
@@ -73,7 +96,11 @@
         </li>
     </ul>
 </section>
-</main>
-    
+
+<footer>
+    <p> Created by Chris Arechiga</p>
+</footer>
+
+</main>    
 </body>
 </html>

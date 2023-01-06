@@ -14,18 +14,21 @@ body {
     background-color: #d9dcd6;
 }
 
-
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #0e0f0f;
     color: var(--header-font-color);
-    height: auto;
+    height: 100px;
+    width: 100%;
     display: flex;
+    /* fix position to hold header bar in place as user is scrolling */
+    position: fixed;
+    margin-top: 0px;
 }
 
 .header img{
-    height: 100px;
+    height: 70px;
     width: 100px;
     display: inline-block;
     border-radius: 20%; 
@@ -42,12 +45,12 @@ body {
 .header h1 {
     display: inline-block;
     font-size: 50px;
-    padding: 2%;
+    padding: 1%;
     margin-left: 5%;
     color: var(--header-font-color);
     align-items: left;
     width:100%;
-    min-width: 500px;
+    min-width: 700px;
 }
 
 .header nav {
@@ -75,6 +78,7 @@ body {
     text-decoration: none;
 }
 
+/* higlight nav items on hover to indicate interaction */
 .header nav ul li a:hover {
     color: rgb(42, 7, 236);
     text-decoration: underline;
@@ -84,6 +88,8 @@ section {
     display: flex;
     flex: auto;
     border: solid;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 section h2 {
@@ -93,83 +99,108 @@ section h2 {
     min-width: 100px;
     text-align: right;
     padding: 15px 15px 0px 0px;
+    display: inline-block;
 }
+
+/* padding added here so that floating header doesnt always cover content */
+.about{
+    padding-top: 100px;
+}
+
 .about h2 {
     font-size: xx-large;
     display: inline-block;
     color: black;
 }
+
 .about div{
+    /* makes the bio text fit in the space */
     width: 85%;
-    padding: 8px 0px 8px 5%;
+    padding: 10px 4% 20px 4%;
 }
 
 .about p {
-    background-color: var(--work-box-color);
     display: block;
-    color: aquamarine;
     text-align: center;
+
 }
 
 .work h2 {
     font-size: xx-large;
-    display: inline-block;
-}
-
-.work div {
-    background-color: var(--work-box-color);
-    min-width: 800px;
-    width: 80%;
-    max-width: 1391px;
-    margin: 2%;
-    border: 20px;
-    padding: 11px;
-    display:block;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 10px 5px 5px #0e0f0f;
-}
-
-.work img {
-    width: 100%;
-    height: 300px;
-    object-fit: none;
-    object-position: 0px 0px;
-    border-radius: 10px  10px 45px 45px;
-}
-
-.work div p {
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    color: rgb(16, 16, 29);
-    font-weight: 600;
+    display: block;
+    height: auto;
 }
 
 .work ul{
     display: inline-flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 85%;
 }
 
-.work ul li {
+/* styling for first item in my work section */
+.first-item {
     background-color: var(--work-box-color);
-    width: 30%;
+    width: 90%;
+    Height: 350px;
+    margin: 2%;
+    border: 20px;
+    padding: 11px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 10px 5px 5px #0e0f0f;
+    font-weight: bold;
+}
+
+.first-item img {
+    box-sizing: content-box;
+    display: inline-block;
+    width: 1000px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: none ;
+    object-position: 0px 0px;
+    border-radius: 10px  10px 45px 45px;
+}
+
+.first-item p {
+    display: inline-block;
+    width: 100%;
+    font-size: larger;
+    text-align: center;
+}
+
+/* styling for all work boxes except for first element */
+.not-first {
+    background-color: var(--work-box-color);
+    width: 350px;
+    height: fit-content;
     margin: 2%;
     border: 20px;
     padding: 11px;
     display:inline-block;
-    flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     align-items: center;
     box-shadow: 10px 5px 5px #0e0f0f;
+    font-weight: bold;
 }
 
-.work ul li img{
-    width: 80%;
+.not-first img{
+    width: 100%;
     height: 300px;
-    object-fit: contain;
+    object-fit: fill;
     object-position: 0px 0px;
+    border-radius: 10px  10px 45px 45px;
 }
+
+/* change of box color on hover to indicate interaction */
+.work ul li:hover {
+    background-color: rgb(31, 52, 172);
+}
+
 .contact h2 {
     font-size: xx-large;
     display: inline-block;
@@ -188,4 +219,12 @@ section h2 {
 .contact ul li a:hover {
     color: white;
     text-decoration: underline;
+}
+
+/* added fiiter so the contact me section wasnt all the way at the bottom */
+footer{
+    background-color: black;
+    color: azure;
+    padding: 10px;
+    text-align: center;
 }
